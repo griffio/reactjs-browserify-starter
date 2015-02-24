@@ -7,11 +7,9 @@ var result = {count: 42};
 
 Tape('Counter', function (t) {
 
-    t.plan(2);
+    t.plan(1);
 
     var counter = ReactTestUtils.renderIntoDocument(<Counter initialCounter={result} />);
-
-    t.equal(counter.state.count, result.count, 'initialCounter using init value');
 
     ReactTestUtils.Simulate.click(counter.getDOMNode());
 
