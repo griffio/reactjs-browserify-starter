@@ -1,0 +1,33 @@
+{
+  "name": "reactjs-browserify-starter",
+  "version": "0.1.0",
+  "description": "reactjs browserify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/griffio/reactjs-browserify-starter.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test.jsx | testling -x open",
+    "bundle": "browserify --entry index.jsx --outfile bundle.js --debug",
+    "serve": "beefy index.jsx:bundle.js --open"
+  },
+  "author": "griffio",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "reactify": "^1.0.0",
+    "tape": "^3.5.0",
+    "uglifyify": "^3.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "testling": {
+  }
+}
