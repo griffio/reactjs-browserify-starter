@@ -1,11 +1,11 @@
-var tape = require('tape');
+var Tape = require('tape');
 var React = require('react/addons');
 var ReactTestUtils = React.addons.TestUtils;
 var Counter = require('./counter.jsx');
 
 var result = {count: 42};
 
-tape('Counter', function (t) {
+Tape('Counter', function (t) {
 
     t.plan(2);
 
