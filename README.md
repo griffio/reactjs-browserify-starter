@@ -13,9 +13,12 @@ Browserify, Testling
 ~~~
 
 ### Commands
-[linux | osx]
+Args for [linux | osx]
+
+Linux may require xorg-server-xvfb (virtual frame buffer) dependency
+
 ~~~
-browserify test.jsx | testling -x [xdg-open | open]
+testling -x [chromium | firefox | xdg-open | open]
 ~~~
 
 ~~~
@@ -24,8 +27,6 @@ npm test
 npm run bundle
 npm run serve
 ~~~
-
-
 
 Counter.jsx
 
