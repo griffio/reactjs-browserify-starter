@@ -18,6 +18,10 @@ Args for [linux | osx]
 Linux may require xorg-server-xvfb (virtual frame buffer) dependency
 
 ~~~
+testling
+~~~
+
+~~~
 testling -x [chromium | firefox | xdg-open | open]
 ~~~
 
@@ -26,6 +30,7 @@ npm install
 npm test
 npm run bundle
 npm run serve
+testling
 ~~~
 
 Counter.jsx
