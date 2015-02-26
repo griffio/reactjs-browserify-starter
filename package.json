@@ -29,5 +29,6 @@
     ]
   },
   "testling": {
+    "files": "test.jsx"
   }
 }
