@@ -9,10 +9,14 @@ test.jsx [ tape, React.addons.TestUtils ]
 Browserify, Testling
 
 ~~~
-npm install -g browserify testling
+[sudo] npm install -g browserify testling
 ~~~
 
 ### Commands
+[linux | osx]
+~~~
+browserify test.jsx | testling -x [xdg-open | open]
+~~~
 
 ~~~
 npm install
@@ -20,6 +24,8 @@ npm test
 npm run bundle
 npm run serve
 ~~~
+
+
 
 Counter.jsx
 
