@@ -1,6 +1,6 @@
 {
   "name": "reactjs-browserify-starter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "reactjs browserify",
   "repository": {
     "type": "git",
@@ -15,12 +15,12 @@
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.13.3"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "reactify": "^1.0.0",
-    "tape": "^3.5.0",
+    "browserify": "^11.2.0",
+    "reactify": "^1.1.1",
+    "tape": "^4.2.0",
     "uglifyify": "^3.0.1"
   },
   "browserify": {
