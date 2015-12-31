@@ -1,5 +1,9 @@
 #ReadMe
 ##Simple starter project for React.js
+browserify
+babelify
+react 0.14.3
+.babelrc with "presets": ["react"]
 
 Increment a button click counter component
 
