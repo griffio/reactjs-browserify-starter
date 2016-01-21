@@ -1,7 +1,7 @@
 {
   "name": "reactjs-browserify-starter",
-  "version": "0.3.0",
-  "description": "reactjs browserify",
+  "version": "0.3.1",
+  "description": "reactjs browserify, with tape, starter ",
   "repository": {
     "type": "git",
     "url": "https://github.com/griffio/reactjs-browserify-starter.git"
@@ -10,19 +10,21 @@
   "scripts": {
     "test": "browserify test.jsx | testling -x open",
     "bundle": "browserify --entry index.jsx --outfile bundle.js --debug",
-    "serve": "beefy index.jsx:bundle.js --open"
+    "serve": "budo index.jsx:bundle.js --live --open"
   },
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.3"
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
+    "watchify": "3.7.0",
     "babelify": "^7.2.0",
     "tape": "^4.4.0",
     "uglifyify": "^3.0.1",
-    "babel-preset-react": "^6.3.13" 
+    "babel-preset-react": "^6.3.13"
   },
   "browserify": {
     "transform": [ "babelify" ]

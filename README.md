@@ -1,7 +1,7 @@
 #ReadMe
 ##Simple starter project for React.js
 
-browserify, babelify, react 0.14.3
+browserify, babelify, react 0.14.5 and budo (see https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -15,7 +15,7 @@ test.jsx [ tape, React.addons.TestUtils ]
 Browserify, Testling
 
 ~~~
-[sudo] npm install -g browserify testling
+[sudo] npm install -g browserify testling budo
 ~~~
 
 ### Commands
@@ -39,7 +39,7 @@ npm run serve
 testling
 ~~~
 
-Counter.jsx
+counter.jsx
 
 ~~~javascript
 
@@ -63,11 +63,13 @@ module.exports = Counter;
 
 ~~~
 
-Index.jsx
+index.jsx
 
 ~~~javascript
 var React = require("react");
+var ReactDOM = require('react-dom');
 var Counter = require("./counter.jsx");
-var counter = {count: 42};
-React.render(<Counter initialCounter={counter} />, document.body);
+var count = {count: 42};
+ReactDOM.render(React.createElement('h1', null, 'Counter'), document.getElementById("heading"));
+ReactDOM.render(<Counter initialCounter={count} />, document.getElementById("content"));
 ~~~
