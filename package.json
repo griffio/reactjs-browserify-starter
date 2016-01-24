@@ -9,8 +9,10 @@
   "main": "index.js",
   "scripts": {
     "test": "browserify test.jsx | testling -x open",
-    "bundle": "browserify --entry index.jsx --outfile bundle.js --debug",
-    "serve": "budo index.jsx:bundle.js --live --open"
+    "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js --debug",
+    "preserve": "browserify --require react --require react-dom > react-bundle.js",
+    "serve": "budo index.jsx:bundle.js --live --open -- -x react -x react-dom"
+
   },
   "author": "griffio",
   "license": "ISC",

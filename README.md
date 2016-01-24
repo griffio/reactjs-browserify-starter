@@ -7,6 +7,12 @@ browserify, babelify, react 0.14.5 and budo (see https://www.npmjs.com/package/b
 
 http://babeljs.io/docs/plugins/preset-react/
 
+Note:
+
+Creates react-bundle.js using npm 'pre' script to speedup builds and rebuilds.
+
+Only the application code is contained in bundle.js.
+
 ###Increment a button click counter component
 
 counter.jsx
