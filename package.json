@@ -11,7 +11,7 @@
     "test": "browserify test.jsx | testling -x open",
     "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js --debug",
     "preserve": "browserify --require react --require react-dom > react-bundle.js",
-    "serve": "budo index.jsx:bundle.js --live --open -- -x react -x react-dom"
+    "serve": "budo index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
 
   },
   "author": "griffio",
@@ -27,6 +27,8 @@
     "babelify": "^7.2.0",
     "tape": "^4.4.0",
     "uglifyify": "^3.0.1",
+    "livereactload" : "2.1.1",
+    "react-proxy": "^2.0.1",
     "babel-preset-react": "^6.3.13"
   },
   "browserify": {

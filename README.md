@@ -1,17 +1,24 @@
 #ReadMe
 ##Simple starter project for React.js
 
-browserify, babelify, react 0.14.5 and budo (see https://www.npmjs.com/package/budo)
+browserify, babelify, react 0.14.5, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
 http://babeljs.io/docs/plugins/preset-react/
 
-Note:
+Do it!
+~~~
+npm run serve
+~~~
+
+Notes:
 
 Creates react-bundle.js using npm 'pre' script to speedup builds and rebuilds.
 
 Only the application code is contained in bundle.js.
+
+Allows live updates to code changes via livereactload plugin for browserify.
 
 ###Increment a button click counter component
 
