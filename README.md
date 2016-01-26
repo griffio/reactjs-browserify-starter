@@ -40,6 +40,7 @@ Linux may require xorg-server-xvfb (virtual frame buffer) dependency
 testling
 ~~~
 
+
 ~~~
 testling -x [chromium | firefox | xdg-open | open]
 ~~~
@@ -80,9 +81,9 @@ index.jsx
 
 ~~~javascript
 var React = require("react");
-var ReactDOM = require('react-dom');
+var ReactDOM = require("react-dom");
 var Counter = require("./counter.jsx");
 var count = {count: 42};
-ReactDOM.render(React.createElement('h1', null, 'Counter'), document.getElementById("heading"));
+ReactDOM.render(React.createElement("h1", null, "Counter"), document.getElementById("heading"));
 ReactDOM.render(<Counter initialCounter={count} />, document.getElementById("content"));
 ~~~
