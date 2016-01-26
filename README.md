@@ -9,6 +9,7 @@ http://babeljs.io/docs/plugins/preset-react/
 
 Do it!
 ~~~
+npm install
 npm run serve
 ~~~
 
@@ -45,12 +46,13 @@ testling
 testling -x [chromium | firefox | xdg-open | open]
 ~~~
 
+Commands
 ~~~
 npm install
 npm test
 npm run bundle
 npm run serve
-testling
+testling -x open
 ~~~
 
 counter.jsx
