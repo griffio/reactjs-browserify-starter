@@ -1,11 +1,7 @@
 #ReadMe
 ##Simple starter project for React.js
 
-Tested on
----
-Node 4.4.x
-NPM  3.8.x
----
+Tested on Node 4.4.x, Npm 3.8.x
 
 browserify, babelify, react 15.x.x, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
 
