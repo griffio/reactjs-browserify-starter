@@ -1,7 +1,13 @@
 #ReadMe
 ##Simple starter project for React.js
 
-browserify, babelify, react 0.14.5, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
+Tested on
+---
+Node 4.4.x
+NPM  3.8.x
+---
+
+browserify, babelify, react 15.x.x, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -41,12 +47,13 @@ Linux may require xorg-server-xvfb (virtual frame buffer) dependency
 testling
 ~~~
 
-
 ~~~
 testling -x [chromium | firefox | xdg-open | open]
 ~~~
 
 Commands
+
+note: --ignore-scripts=false should be used if your .npmrc doesn't allow npm scripts
 ~~~
 npm install
 npm test
