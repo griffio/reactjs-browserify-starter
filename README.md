@@ -34,7 +34,7 @@ Browserify, Testling
 [sudo] npm install -g browserify testling budo
 ~~~
 
-### Commands
+### Tests
 Args for [linux | osx]
 
 Linux may require xorg-server-xvfb (virtual frame buffer) dependency
@@ -47,9 +47,10 @@ testling
 testling -x [chromium | firefox | xdg-open | open]
 ~~~
 
-Commands
+### Commands
 
-note: --ignore-scripts=false should be used if your .npmrc doesn't allow npm scripts
+You must add the "--ignore-scripts=false" parameter if your .npmrc **doesn't allow** npm scripts
+
 ~~~
 npm install
 npm test
