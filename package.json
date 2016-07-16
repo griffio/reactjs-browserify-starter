@@ -1,6 +1,6 @@
 {
   "name": "reactjs-browserify-starter",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "reactjs browserify, with tape, starter ",
   "repository": {
     "type": "git",
@@ -17,19 +17,19 @@
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "react-addons-test-utils": "^15.0.2"
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-addons-test-utils": "^15.2.1"
   },
   "devDependencies": {
-    "browserify": "^12.0.1",
+    "browserify": "^13.0.1",
     "watchify": "3.7.0",
     "babelify": "^7.2.0",
     "tape": "^4.4.0",
     "uglifyify": "^3.0.1",
     "livereactload" : "2.1.1",
     "react-proxy": "^2.0.1",
-    "babel-preset-react": "^6.3.13"
+    "babel-preset-react": "^6.11.1"
   },
   "browserify": {
     "transform": [ "babelify" ]
