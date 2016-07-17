@@ -17,6 +17,8 @@ npm run serve
 
 Notes:
 
+use --ignore-scripts=false if you have blocked npm scripting commands.
+
 Creates react-bundle.js using npm 'pre' script to speedup builds and rebuilds.
 
 Only the application code is contained in bundle.js.
