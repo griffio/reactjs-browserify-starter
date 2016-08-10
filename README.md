@@ -1,5 +1,5 @@
 #ReadMe
-##Simple starter project for React.js
+##Basic starterify project for React.js
 
 Tested on Node 4.4.x, Npm 3.8.x
 
