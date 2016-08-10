@@ -29,10 +29,11 @@
     "uglifyify": "^3.0.1",
     "livereactload" : "2.1.1",
     "react-proxy": "^2.0.1",
-    "babel-preset-react": "^6.11.1"
+    "babel-preset-react": "^6.11.1",
+	"babel-preset-es2015": "^6.13.2"
   },
   "browserify": {
-    "transform": [ "babelify" ]
+    "transform": [["babelify", {"presets": ["es2015"]}]]
   },
   "testling": {
     "files": "test.jsx"
