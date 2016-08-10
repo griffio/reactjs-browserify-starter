@@ -3,7 +3,7 @@
 
 Tested on Node 4.4.x, Npm 3.8.x
 
-browserify, babelify, react 15.x.x, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 15.x.x, livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -64,34 +64,63 @@ testling -x open
 counter.jsx
 
 ~~~javascript
+import React, { Component } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 
-var React = require("react");
+export default class Counter extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {count: props.initialCounter};
+		this.clickHandler = this.clickHandler.bind(this);
+}
 
-var Counter = React.createClass({
-    getInitialState: function () {
-        return this.props.initialCounter ? this.props.initialCounter : {count: 0}
-    },
-    clickHandler: function (event) {
-        this.setState({count: this.state.count + 1});
-    },
-    render: function () {
-        return (
-            <button onClick={this.clickHandler}>{this.state.count}</button>
-        )
+	clickHandler() {
+		this.setState({count: this.state.count + 1});
     }
-});
 
-module.exports = Counter;
+	render() {
+		return <button onClick={this.clickHandler}>{this.state.count}</button>;
+	}
+};
 
+Counter.propTypes = {initialCounter: React.PropTypes.number};
+Counter.defaultProps = {initialCounter: 0};
 ~~~
 
 index.jsx
 
 ~~~javascript
-var React = require("react");
-var ReactDOM = require("react-dom");
-var Counter = require("./counter.jsx");
-var count = {count: 42};
-ReactDOM.render(React.createElement("h1", null, "Counter"), document.getElementById("heading"));
-ReactDOM.render(<Counter initialCounter={count} />, document.getElementById("content"));
+import React from "react";
+import ReactDOM from "react-dom";
+import Counter from "./counter.jsx";
+const Heading = (props) => <h1>Counter</h1>;
+
+ReactDOM.render(<Heading />, document.getElementById("heading"));
+ReactDOM.render(<Counter initialCounter={42} />, document.getElementById("content"));
 ~~~
+
+test.jsx
+
+~~~
+import Tape from 'tape';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTestUtils from 'react-addons-test-utils';
+import Counter from './counter.jsx';
+
+const initialCount = 42;
+const expectedCount = initialCount + 1;
+
+Tape('Counter', function (t) {
+
+  t.plan(1);
+
+  var counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={initialCount}/>);
+
+  ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(counter));
+
+  t.equal(counter.state.count, expectedCount, 'increment the counter once');
+
+});
+~~~
+

@@ -1,19 +1,20 @@
-var Tape = require('tape');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactTestUtils = require('react-addons-test-utils');
-var Counter = require('./counter.jsx');
+import Tape from 'tape';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTestUtils from 'react-addons-test-utils';
+import Counter from './counter.jsx';
 
-var result = {count: 42};
+const initialCount = 42;
+const expectedCount = initialCount + 1;
 
 Tape('Counter', function (t) {
 
   t.plan(1);
 
-  var counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={result}/>);
+  var counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={initialCount}/>);
 
   ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(counter));
 
-  t.equal(counter.state.count, result.count + 1, 'increment counter once');
+  t.equal(counter.state.count, expectedCount, 'increment the counter once');
 
 });

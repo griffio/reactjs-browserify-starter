@@ -1,6 +1,7 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-var Counter = require("./counter.jsx");
-var count = {count: 22};
-ReactDOM.render(React.createElement("h1", null, "Counter"), document.getElementById("heading"));
-ReactDOM.render(<Counter initialCounter={count} />, document.getElementById("content"));
+import React from "react";
+import ReactDOM from "react-dom";
+import Counter from "./counter.jsx";
+const Heading = (props) => <h1>Counter</h1>;
+
+ReactDOM.render(<Heading />, document.getElementById("heading"));
+ReactDOM.render(<Counter initialCounter={42} />, document.getElementById("content"));
