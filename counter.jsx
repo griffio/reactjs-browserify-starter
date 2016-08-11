@@ -23,14 +23,14 @@ Counter.defaultProps = {initialCounter: 0};
 const styles = StyleSheet.create({
 
 	action: {
-		color: 'white',
+		color: 'yellow',
 		borderRadius: '4px',
 		textShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
-		background: 'rgb(28, 184, 65)'
+		background: 'blue'
 	},					 
 
 	larger: {
-		fontSize: '120%'
+		fontSize: '115%'
 	}
 
 });
