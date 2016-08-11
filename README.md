@@ -1,5 +1,8 @@
 #ReadMe
-##Basic starterify project for React.js
+
+Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](https://github.com/facebookincubator/create-react-app) for a starter as that is a prescribed setup - however it is non-configurable and has limited features.
+
+##Basic starterify project for ReactJS with extras for testing and instant reloading 
 
 Tested on Node 4.4.x, Npm 3.8.x
 
