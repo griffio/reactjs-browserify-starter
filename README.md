@@ -3,7 +3,7 @@
 
 Tested on Node 4.4.x, Npm 3.8.x
 
-browserify, babelify, es2015, react 15.x.x, aphrodite, enzyme,  livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/),livereactload, react-proxy and [budo](https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -15,9 +15,11 @@ npm install
 npm run serve
 ~~~
 
-Notes:
+---
 
-use --ignore-scripts=false if you have blocked npm scripting commands.
+**Notes:**
+
+Use ```--ignore-scripts=false``` if you have blocked npm scripting commands.
 
 Creates react-bundle.js using npm 'pre' script to speedup builds and rebuilds.
 
@@ -51,7 +53,7 @@ testling -x [chromium | firefox | xdg-open | open]
 
 ### Commands
 
-You must add the "--ignore-scripts=false" parameter if your .npmrc **doesn't allow** npm scripts
+You must add the ```--ignore-scripts=false``` parameter if your .npmrc **doesn't allow** npm scripts
 
 ~~~
 npm install
@@ -116,26 +118,39 @@ ReactDOM.render(<Counter initialCounter={42} />, document.getElementById("conten
 
 test.jsx
 
-~~~
+~~~javascript
+
 import Tape from 'tape';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {mount} from 'enzyme';
 import ReactTestUtils from 'react-addons-test-utils';
 import Counter from './counter.jsx';
 
 const initialCount = 42;
 const expectedCount = initialCount + 1;
 
-Tape('Counter', function (t) {
+Tape('<Counter /> React Test Utils', (t) => {
 
   t.plan(1);
 
-  var counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={initialCount}/>);
+  const counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={initialCount}/>);
 
   ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(counter));
 
   t.equal(counter.state.count, expectedCount, 'increment the counter once');
 
 });
-~~~
 
+Tape('<Counter /> enzyme mount wrapper simulate state', (t) => {
+
+	t.plan(2);
+
+	const wrapper = mount(<Counter refs="counter" initialCounter={initialCount} />);
+
+	wrapper.simulate('click');
+
+	t.equal(wrapper.state().count, expectedCount, 'increment the counter once');
+});
+
+~~~
