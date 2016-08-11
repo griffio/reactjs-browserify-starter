@@ -3,7 +3,7 @@
 
 Tested on Node 4.4.x, Npm 3.8.x
 
-browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/),livereactload, react-proxy and [budo](https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy and [budo](https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
