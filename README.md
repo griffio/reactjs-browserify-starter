@@ -12,7 +12,7 @@ browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/
 
 http://babeljs.io/docs/plugins/preset-react/
 
-Do it!
+git clone repo and Do it!
 ~~~
 npm install
 npm run serve
