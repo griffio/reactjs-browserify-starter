@@ -13,7 +13,9 @@ browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/
 http://babeljs.io/docs/plugins/preset-react/
 
 git clone repo and Do it!
+
 ~~~
+[sudo] npm install -g browserify testling faucet budo watchify
 npm install
 npm run serve
 ~~~
@@ -36,18 +38,8 @@ Tests are bundled under [watchify](https://github.com/substack/watchify), for au
 
 Using [testling](https://github.com/substack/watchify) and [faucet](https://github.com/substack/faucet) provides tap formatted tests in the browser and console.
 
-###Increment a button click counter component
-
-counter.jsx
-test.jsx [ tape, React.addons.TestUtils ]
-
-Browserify, Testling, Facet
-
-~~~
-[sudo] npm install -g browserify testling faucet budo watchify
-~~~
-
 ### Tests
+
 Args for [linux | osx]
 
 Linux may require xorg-server-xvfb (virtual frame buffer) dependency
@@ -65,11 +57,11 @@ testling -x [chromium | firefox | xdg-open | open]
 You must add the ```--ignore-scripts=false``` parameter if your .npmrc **doesn't allow** npm scripts
 
 ~~~
+[sudo] npm install -g browserify testling faucet budo watchify
 npm install
 npm test
 npm run bundle
 npm run serve
-testling -x open
 ~~~
 
 counter.jsx
