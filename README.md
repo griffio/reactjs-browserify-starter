@@ -6,7 +6,7 @@ Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](h
 
 Tested on Node 4.4.x, Npm 3.8.x
 
-browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), tape, faucet, livereactload, react-proxy and [budo](https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy,  tape, watchify, faucet, and [budo](https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -30,6 +30,12 @@ Only the application code is contained in bundle.js.
 
 Allows live updates to code changes via livereactload plugin for browserify.
 
+Tests are bundled under [watchify](https://github.com/substack/watchify), for automatic reloading, then piped to testling and faucet. “outfile” is mandatory but can be a command that receives the bundled javascript via pipe :-
+
+``` "watchify --outfile 'testling -x open | faucet' ```
+
+Using [testling](https://github.com/substack/watchify) and [faucet](https://github.com/substack/faucet) provides tap formatted tests in the browser and console.
+
 ###Increment a button click counter component
 
 counter.jsx
@@ -38,7 +44,7 @@ test.jsx [ tape, React.addons.TestUtils ]
 Browserify, Testling, Facet
 
 ~~~
-[sudo] npm install -g browserify testling faucet budo
+[sudo] npm install -g browserify testling faucet budo watchify
 ~~~
 
 ### Tests
