@@ -30,7 +30,7 @@ Tape('<Counter /> enzyme mount wrapper simulate state', (t) => {
 
   wrapper.simulate('click');
 
-  t.equal(wrapper.state().count, expected, 'increment the counter once');
+  t.equal(wrapper.state().count, expected, 'incremented the counter once');
 
   t.end()
 });
