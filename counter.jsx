@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
 		color: 'white',
 		borderRadius: '4px',
 		textShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
-		background: 'blue'
+		background: 'green'
 	},					 
 
 	larger: {
-		fontSize: '115%'
+		fontSize: '150%'
 	}
 
 });

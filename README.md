@@ -6,7 +6,7 @@ Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](h
 
 Tested on Node 4.4.x, Npm 3.8.x
 
-browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy and [budo](https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 15.x.x, aphrodite, enzyme,  livereactload, react-proxy and budo (see https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
@@ -35,10 +35,10 @@ Allows live updates to code changes via livereactload plugin for browserify.
 counter.jsx
 test.jsx [ tape, React.addons.TestUtils ]
 
-Browserify, Testling
+Browserify, Testling, Facet
 
 ~~~
-[sudo] npm install -g browserify testling budo
+[sudo] npm install -g browserify testling faucet budo
 ~~~
 
 ### Tests
