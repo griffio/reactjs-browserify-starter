@@ -2,7 +2,7 @@
 
 Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](https://github.com/facebookincubator/create-react-app) as a starter with prescribed settings - however it is non-configurable and has limited features for now.
 
-##Basic starterify project for ReactJS with extras for testing and instant reloading 
+##Basic starterify project for ReactJS with extras for instant reloading, tests, CSS 
 
 Tested on Node 4.4.x, Npm 3.8.x
 
