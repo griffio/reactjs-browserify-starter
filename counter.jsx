@@ -13,7 +13,7 @@ export default class Counter extends Component {
     }
 
 	render() {
-		return <button className={css(styles.action, styles.larger)} onClick={this.clickHandler}>{this.state.count}</button>;
+		return <button className={css(styles.action, styles.larger, styles.shake)} onClick={this.clickHandler}>{this.state.count}</button>;
 	}
 };
 
@@ -27,7 +27,20 @@ const styles = StyleSheet.create({
 		borderRadius: '4px',
 		textShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
 		background: 'green'
-	},					 
+	},
+
+  shake: {
+    animationName: {
+      '25%': {
+        transform: 'scale(1.05) rotate(4deg)'
+      },
+      '50%': {
+        transform: 'scale(1.05) rotate(-4deg)'
+      }
+    },
+    animationDuration:'1s',
+    animationIterationCount: 'infinite'
+  },
 
 	larger: {
 		fontSize: '150%'
