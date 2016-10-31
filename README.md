@@ -36,6 +36,8 @@ Tests are bundled under [watchify](https://github.com/substack/watchify), for au
 
 ``` watchify --outfile 'testling -x open | faucet' ```
 
+The above command following -x is OS specific and is used to launche a local browser for the html file parameter.
+
 Using [testling](https://github.com/substack/watchify) and [faucet](https://github.com/substack/faucet) provides tap formatted tests in the browser and console.
 
 ### Tests
