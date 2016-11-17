@@ -1,6 +1,6 @@
 {
   "name": "reactjs-browserify-starter",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "reactjs browserify, with tape, starter ",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "watchify --outfile 'testling -x open | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment test.jsx",
+    "test": "watchify --outfile 'testling | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment test.jsx",
     "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js --debug",
     "preserve": "browserify --require react --require react-dom > react-bundle.js",
     "serve": "budo index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
@@ -16,18 +16,18 @@
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "aphrodite": "^0.5.0",
-    "react": "^15.3.2",
-    "react-addons-test-utils": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "aphrodite": "^1.1.0",
+    "react": "^15.4.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-dom": "^15.4.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
-    "enzyme": "^2.5.1",
-    "livereactload": "3.0.1",
+    "enzyme": "^2.6.0",
+    "livereactload": "3.1.0",
     "react-proxy": "^2.0.8",
     "tape": "^4.6.2",
     "uglifyify": "^3.0.4",
@@ -46,6 +46,10 @@
     ]
   },
   "testling": {
+    "browsers": [
+     "chrome/latest",
+     "safari/5..latest"
+    ],
     "files": "test.jsx"
   }
 }
