@@ -26,9 +26,7 @@ npm run serve
 
 Use ```--ignore-scripts=false``` if you have blocked npm scripting commands.
 
-Creates react-bundle.js using npm 'pre' script to speedup builds and rebuilds.
-
-Only the application code is contained in bundle.js.
+Creates **react-bundle.js** using npm 'pre' script to speedup builds and rebuilds. This means the vendor modules are not built each time "watch" fires. Only the application code is contained in **bundle.js**.
 
 Allows live updates to code changes via livereactload plugin for browserify.
 
@@ -46,9 +44,13 @@ Args for [linux | osx]
 
 Linux may require xorg-server-xvfb (virtual frame buffer) dependency
 
+OSX may report from npm test as "no headless browser". You can try ``` rm -rf ~/.config/browser-launcher ``` and ```npm install phantomjs -g```. Running ```npm test``` should create a new configuration section for phantomjs under ~/.config/browser-launcher.
+
 ~~~
 testling
 ~~~
+
+OS specific commands
 
 ~~~
 testling -x [chromium | firefox | xdg-open | open]
