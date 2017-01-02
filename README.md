@@ -17,6 +17,7 @@ git clone repo and Do it!
 ~~~
 [sudo] npm install -g browserify testling faucet budo watchify
 npm install
+npm test
 npm run serve
 ~~~
 
