@@ -25,13 +25,13 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
+    "browserify": "^14.1.0",
     "enzyme": "^2.7.0",
-    "livereactload": "3.1.1",
+    "livereactload": "3.3.0",
     "react-proxy": "^2.0.8",
     "tape": "^4.6.3",
     "uglifyify": "^3.0.4",
-    "watchify": "3.8.0"
+    "watchify": "3.9.0"
   },
   "browserify": {
     "transform": [
