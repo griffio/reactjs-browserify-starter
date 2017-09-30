@@ -1,9 +1,12 @@
 import Tape from 'tape';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {mount} from 'enzyme';
+import {configure, mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
 import ReactTestUtils from 'react-dom/test-utils';
 import Counter from './counter.jsx';
+
+configure({ adapter: new Adapter() });
 
 Tape('<Counter /> React Test Utils', (t) => {
 
