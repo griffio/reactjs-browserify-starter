@@ -6,7 +6,7 @@ Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](h
 
 Tested on Node 8.10.x, Npm 5.6.x
 
-browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy,  tape, watchify, faucet, and [budo](https://www.npmjs.com/package/budo)
+browserify, babelify, es2015, react 16.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy,  tape, watchify, faucet, and [budo](https://www.npmjs.com/package/budo)
 
 .babelrc with "presets": ["react"]
 
