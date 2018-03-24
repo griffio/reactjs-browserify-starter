@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import Tape from 'tape';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "watchify --outfile 'testling | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment test.jsx",
+    "test": "watchify --outfile 'testling | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment ./node_modules/babel-polyfill test.jsx",
     "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js --debug",
     "preserve": "browserify --require react --require react-dom > react-bundle.js",
     "serve": "budo index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
