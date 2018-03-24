@@ -4,7 +4,7 @@ Firstly, be sure to checkout the offical ReactJS incubating [create-react-app](h
 
 ##Basic starterify project for ReactJS with extras for instant reloading, tests, CSS 
 
-Tested on Node 4.4.x, Npm 3.8.x
+Tested on Node 8.10.x, Npm 5.6.x
 
 browserify, babelify, es2015, react 15.x.x, [aphrodite](https://github.com/Khan/aphrodite/), [enzyme](http://airbnb.io/enzyme/), livereactload, react-proxy,  tape, watchify, faucet, and [budo](https://www.npmjs.com/package/budo)
 

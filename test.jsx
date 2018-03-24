@@ -1,8 +1,9 @@
+import 'babel-polyfill';
 import Tape from 'tape';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {configure, mount} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
+import Adapter from 'enzyme-adapter-react-16';
 import ReactTestUtils from 'react-dom/test-utils';
 import Counter from './counter.jsx';
 
