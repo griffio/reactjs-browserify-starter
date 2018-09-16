@@ -126,39 +126,32 @@ test.jsx
 
 ~~~javascript
 
-import Tape from 'tape';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {mount} from 'enzyme';
-import ReactTestUtils from 'react-dom/test-utils';
-import Counter from './counter.jsx';
-
-Tape('<Counter /> React Test Utils', (t) => {
+test('<Counter /> shallow state simulate click', (t) => {
 
   t.plan(1);
 
-  const counter = ReactTestUtils.renderIntoDocument(<Counter refs="counter" initialCounter={42}/>);
+  const counter = shallow(<Counter initialCounter={42}/>);
 
-  const expected = counter.state.count + 1
+  const expected = counter.state().count + 1;
 
-  ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(counter));
+  counter.find('button').simulate('click');
 
-  t.equal(counter.state.count, expected, 'incremented the counter once');
+  t.equal(counter.state().count, expected, 'incremented the counter once');
 
   t.end()
 });
 
-Tape('<Counter /> enzyme mount wrapper simulate state', (t) => {
+test('<Counter /> mount state simulate click ', (t) => {
 
   t.plan(1);
 
-  const wrapper = mount(<Counter refs="counter" />);
+  const counter = mount(<Counter />);
 
-  const expected = wrapper.state().count + 1
+   const expected = counter.state().count + 1;
 
-  wrapper.simulate('click');
+  counter.find('button').simulate('click');
 
-  t.equal(wrapper.state().count, expected, 'incremented the counter once');
+  t.equal(counter.state().count, expected, 'incremented the counter once');
 
   t.end()
 });
