@@ -25,7 +25,7 @@ test('<Counter /> mount state simulate click ', (t) => {
 
   t.plan(1);
 
-  const counter = mount(<Counter />, {disableLifecycleMethods: true});
+  const counter = mount(<Counter />);
 
    const expected = counter.state().count + 1;
 
