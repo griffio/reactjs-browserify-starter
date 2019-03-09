@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "watchify --outfile 'testling | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment ./node_modules/babel-polyfill test.jsx",
+    "test": "watchify --outfile 'testling | faucet' --external react/addons --external react/lib/ReactContext --external react/lib/ExecutionEnvironment test.jsx",
     "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js --debug",
     "preserve": "browserify --require react --require react-dom > react-bundle.js",
     "serve": "budo index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
@@ -16,24 +16,26 @@
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "aphrodite": "^2.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "prop-types": "^15.6.2"
+    "@babel/polyfill": "^7.2.5",
+    "aphrodite": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babelify": "^8.0.0",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babelify": "^10.0.0",
     "browserify": "^16.2.2",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
-    "livereactload": "3.3.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "livereactload": "^3.4.0",
     "tape": "^4.9.1",
-    "uglifyify": "^4.0.5",
-    "watchify": "3.11.0"
+    "uglifyify": "^5.0.1",
+    "watchify": "^3.11.1"
   },
   "browserify": {
     "transform": [
@@ -41,7 +43,8 @@
         "babelify",
         {
           "presets": [
-            "es2015"
+            "@babel/env",
+            "@babel/react"
           ]
         }
       ]
